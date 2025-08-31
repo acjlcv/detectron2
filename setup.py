@@ -86,11 +86,11 @@ def get_extensions():
         if nvcc_flags_env != "":
             extra_compile_args["nvcc"].extend(nvcc_flags_env.split(" "))
 
-        if torch_ver < [1, 7]:
-            # supported by https://github.com/pytorch/pytorch/pull/43931
-            CC = os.environ.get("CC", None)
-            if CC is not None:
-                extra_compile_args["nvcc"].append("-ccbin={}".format(CC))
+        # if torch_ver < [1, 7]:
+        # supported by https://github.com/pytorch/pytorch/pull/43931
+        CC = os.environ.get("CC", None)
+        if CC is not None:
+            extra_compile_args["nvcc"].append("-ccbin={}".format(CC))
 
     include_dirs = [extensions_dir]
 
