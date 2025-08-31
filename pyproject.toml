@@ -18,7 +18,7 @@ authors = [
     { name = "FAIR" }
 ]
 
-urls = { "Homepage" = "https://github.com/facebookresearch/detectron2" }
+urls = { Homepage = "https://github.com/facebookresearch/detectron2" }
 
 dependencies = [
     "Pillow>=7.1",
